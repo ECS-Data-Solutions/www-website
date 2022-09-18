@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Home">
+	<main>
+		<h1>Welcome to <span class="text-gradient">ECS Data Solutions</span></h1>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="/policies"
+				title="Policies"
+				body="Basic policies for all ECS Products and services"
+			/>
+			<Card
+				href="/shop"
+				title="Shop"
+				body="ECS Shop. It's exxactly what it sounds like! Purchase your services/licenses here!"
+			/>
+			<Card
+				href="/top-projects"
+				title="ECS Top Projects"
+				body="Awesome open source projects that the team here at ECS love!"
+			/>
+			<Card
+				href=""
+				title="...?"
+				body="Something very exciting will be joining us here soon!"
+			/>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	:root {
+		--astro-gradient: linear-gradient(0deg, #3D3B50, #615C8C);
+	}
+
+	h1 {
+		margin: 2rem 0;
+	}
+
+	main {
+		margin: auto;
+		padding: 1em;
+		max-width: 60ch;
+	}
+
+	.text-gradient {
+		font-weight: 900;
+		background-image: var(--astro-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 100% 200%;
+		background-position-y: 100%;
+		border-radius: 0.4rem;
+		animation: pulse 4s ease-in-out infinite;
+	}
+
+	@keyframes pulse {
+		0%,
+		100% {
+			background-position-y: 0%;
+		}
+		50% {
+			background-position-y: 80%;
+		}
+	}
+
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		background: #3D3B50;
+		padding: 1rem;
+		border-radius: 0.4rem;
+		color: var(--color-bg);
+	}
+
+	.instructions code {
+		font-size: 0.875em;
+		border: 0.1em solid var(--color-border);
+		border-radius: 4px;
+		padding: 0.15em 0.25em;
+	}
+
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+</style>
