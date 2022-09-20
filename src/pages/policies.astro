@@ -1,0 +1,106 @@
+---
+import Main from '../layouts/Main.astro';
+import Card from '../components/Card.astro';
+---
+
+<Main title="Policies">
+		<h1>Policies</h1>
+        <div class="privacy-policy">
+            <h2>Privacy policy</h2>
+
+            <h4><li>Usage of data</li></h4>
+            <p>
+                Data stored on ECS server will never be sold to ANYONE or any companies ensuring the safety of all your information. 
+                Some data will be stored externally, for example payments are processed through the Stripe checkout system. 
+                For more information on that data research “Stripe Privacy Policy”. 
+                Data stored on your own ECS install is yours to deal with, we will collect opt-in anomalous usage reports. 
+            </p>
+
+            <h4><li>Storage of Data</li></h4>
+            <p>
+                All confidential and user data will be stored on ECS Databases with high encryption levels. 
+                Your data will only be observed/viewed when it is directly needed for support. 
+                IF it gets to the stage where your private data needs to be viewed for support assistance it will be viewed by a member of our Senior Support team.
+            </p>
+        </div>
+
+        <div class="terms-of-service">
+            <h2>Terms Of Service</h2>
+
+            <h4><li>Law’s and Stripe TOS</li></h4>
+            <p>
+                ECS Systems MUST be used for lawful purposes if this is violated your license will be permanently erased with no possible refund and Authorites will be contacted. 
+                We also require for you to follow the Stripe terms of service.
+            </p>
+
+            <h4><li>Licence Infringement</li></h4>
+            <p>
+                If you are found to be using an improper ECS license meaning the software has been pirated you will be met with extreme consequences. 
+                Authorities will be contacted and you will be suspended from license purchasing.
+            </p>
+
+            <h4><li>Friendliness</li></h4>
+            <p>
+                Please be kind and friendly to our Support team. 
+                They’re trying to help you but if you dont be friendly and do as they say we cannot support you and will terminate the support thread.
+            </p>
+        </div>
+</Main>
+
+<style>
+	:root {
+		--astro-gradient: linear-gradient(0deg, #3D3B50, #615C8C);
+	}
+
+	h1 {
+		margin: 2rem 0;
+	}
+    
+    p {
+        margin-left: 1rem;
+    }
+
+	.text-gradient {
+		font-weight: 900;
+		background-image: var(--astro-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 100% 200%;
+		background-position-y: 100%;
+		border-radius: 0.4rem;
+		animation: pulse 4s ease-in-out infinite;
+	}
+
+	@keyframes pulse {
+		0%,
+		100% {
+			background-position-y: 0%;
+		}
+		50% {
+			background-position-y: 80%;
+		}
+	}
+
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		background: #3D3B50;
+		padding: 1rem;
+		border-radius: 0.4rem;
+		color: var(--color-bg);
+	}
+
+	.instructions code {
+		font-size: 0.875em;
+		border: 0.1em solid var(--color-border);
+		border-radius: 4px;
+		padding: 0.15em 0.25em;
+	}
+
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+</style>
