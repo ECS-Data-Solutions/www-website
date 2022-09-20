@@ -1,10 +1,9 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Main from '../layouts/Main.astro';
 import Card from '../components/Card.astro';
 ---
 
-<Layout title="Policies">
-	<main>
+<Main title="Policies">
 		<h1>Policies</h1>
         <div class="privacy-policy">
             <h2>Privacy policy</h2>
@@ -46,8 +45,7 @@ import Card from '../components/Card.astro';
                 They’re trying to help you but if you dont be friendly and do as they say we cannot support you and will terminate the support thread.
             </p>
         </div>
-	</main>
-</Layout>
+</Main>
 
 <style>
 	:root {
@@ -56,12 +54,6 @@ import Card from '../components/Card.astro';
 
 	h1 {
 		margin: 2rem 0;
-	}
-
-	main {
-		margin: auto;
-		padding: 1em;
-		max-width: 60ch;
 	}
     
     p {
